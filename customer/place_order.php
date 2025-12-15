@@ -40,7 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // 3. LƯU CHI TIẾT ĐƠN HÀNG (INSERT vào bảng order_items)
         // Dùng vòng lặp để lưu từng món
-        
+        $query_item = "INSERT INTO order_items (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)";
+        $stmt_item = mysqli_prepare($con, $query_item);
+
+        ;
         }
         
 
