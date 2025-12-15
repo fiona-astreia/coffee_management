@@ -19,3 +19,10 @@ $order = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
 
 if (!$order) die("Order not found");
 
+// 3. LẤY DANH SÁCH MÓN ĂN (Join với bảng products để lấy tên và ảnh)
+$query_items = "SELECT oi.*, p.name as product_name, p.image 
+                FROM order_items oi 
+                JOIN products p ON oi.product_id = p.id 
+                WHERE oi.order_id = $order_id";
+$result_items = mysqli_query($con, $query_items);
+?>
