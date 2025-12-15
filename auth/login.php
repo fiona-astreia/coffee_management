@@ -9,7 +9,11 @@
     <div class="auth-wrapper">
         <div class="auth-card">
 
-            
+            <div class="mb-4">
+                <i class="fas fa-mug-hot fa-3x" style="color: #6c5ce7;"></i>
+                <h1 class="brand-title mt-2">Coffee House</h1>
+                <p class="auth-subtitle">Welcome back! Please login.</p>
+            </div>
 
             <form action="validation.php" method="post">
 
