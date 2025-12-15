@@ -53,26 +53,34 @@ if (!$product) {
     <style>
         body {
             background: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
         }
 
-        .container {
+        .product-container {
             background: #fff;
-            padding: 20px;
-            margin-top: 80px;
-            border-radius: 8px;
+            padding: 40px;
+            margin-top: 50px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
         }
 
         .detail-img {
             width: 100%;
-            max-width: 400px;
-            border-radius: 8px;
-            box-shadow: 0 8px 8px rgba(0, 0, 0.1, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
         }
 
         .price-tag {
-            color: #d9534f;
-            font-size: 24px;
-            font-weight: bold;
+            color: #fdcb6e;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .btn-pill {
+            border-radius: 50px;
+            font-weight: 600;
+            padding: 12px 0;
         }
     </style>
 </head>
