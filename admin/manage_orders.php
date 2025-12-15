@@ -84,10 +84,11 @@ $result = mysqli_query($con, $query);
 
 <body>
     <div class="container">
-        <div class="d-flex justify-content-between mb-4">
-            <h3>Order Management 📦</h3>
-            <a href="../home.php" class="btn btn-secondary">Back to Dashboard</a>
-        </div>
+        <div class="main-card">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3>Order Management</h3>
+                <a href="../home.php" class="btn btn-secondary btn-pill"><i class="fas fa-arrow-left mr-1"></i> Dashboard</a>
+            </div>
 
         <?php if (isset($_GET['msg']) && $_GET['msg'] == 'updated')
             echo '<div class="alert alert-success">Order status updated!</div>'; ?>
