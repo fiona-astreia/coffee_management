@@ -84,7 +84,7 @@ if (isset($_GET['delete_id'])) {
 </head>
 
 <body style="background: #f8f9fa;">
-  <div class="container">
+      <div class="container">
         <div class="main-card">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h3>User Management</h3>
@@ -92,40 +92,41 @@ if (isset($_GET['delete_id'])) {
                     Dashboard</a>
             </div>
 
-        <?php if (isset($_GET['msg']) && $_GET['msg'] == 'deleted')
-            echo '<div class="alert alert-success">User deleted!</div>'; ?>
+            <?php if (isset($_GET['msg']) && $_GET['msg'] == 'deleted')
+                echo '<div class="alert alert-success rounded-pill text-center">User deleted successfully!</div>'; ?>
 
-        <table class="table table-bordered text-center">
-            <thead class="thead-dark">
-                <tr>
-                    <th>ID</th>
-                    <th>Username</th>
-                    <th>Role</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php while ($row = mysqli_fetch_assoc($result)): ?>
+            <table class="table table-hover text-center">
+                <thead>
                     <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php while ($row = mysqli_fetch_assoc($result)): ?>
+                        <tr>
                             <td><?= $row['id'] ?></td>
                             <td class="font-weight-bold"><?= htmlspecialchars($row['username']) ?></td>
-                        <td>
-                               <span class="badge badge-<?= $row['role'] == 'admin' ? 'danger' : 'info' ?> p-2"
+                            <td>
+                                <span class="badge badge-<?= $row['role'] == 'admin' ? 'danger' : 'info' ?> p-2"
                                     style="border-radius: 10px;">
                                     <?= $row['role'] ?>
                                 </span>
-                        </td>
-                        <td>
-                            <a href="manage_users.php?delete_id=<?= $row['id'] ?>"
+                            </td>
+                            <td>
+                                <a href="manage_users.php?delete_id=<?= $row['id'] ?>"
                                     class="btn btn-sm btn-outline-danger btn-pill"
                                     onclick="return confirm('Delete this user?');">
                                     <i class="fas fa-trash-alt"></i> Delete
-                            </a>
-                        </td>
-                    </tr>
-                <?php endwhile; ?>
-            </tbody>
-        </table>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php endwhile; ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 
