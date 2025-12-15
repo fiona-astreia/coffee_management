@@ -57,8 +57,8 @@ if (!$product) {
 
         .container {
             background: #fff;
-            padding: 30px;
-            margin-top: 50px;
+            padding: 20px;
+            margin-top: 80px;
             border-radius: 8px;
         }
 
@@ -66,7 +66,7 @@ if (!$product) {
             width: 100%;
             max-width: 400px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 8px rgba(0, 0, 0.1, 0.1);
         }
 
         .price-tag {
