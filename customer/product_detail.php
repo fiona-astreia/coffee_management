@@ -107,13 +107,14 @@ if (!$product) {
                     <p class="price-tag"><?= number_format($product['price'], 0, ',', '.') ?> <small
                             style="font-size: 1rem; color: #aaa;">VND</small></p>
 
-                <p><strong>Status:</strong>
-                    <span class="badge badge-<?= $product['status'] == 'In Stock' ? 'success' : 'secondary' ?>">
-                        <?= $product['status'] ?>
-                    </span>
-                </p>
-                <hr>
-       <p class="text-muted">Enjoy the finest taste of our coffee, brewed to perfection just for you.</p>
+            <div class="mb-4">
+                        <span
+                            class="badge badge-<?= $product['status'] == 'In Stock' ? 'success' : 'secondary' ?> p-2 rounded-pill px-3">
+                            <?= $product['status'] ?>
+                        </span>
+                    </div>
+
+                    <p class="text-muted">Enjoy the finest taste of our coffee, brewed to perfection just for you.</p>
                     <hr class="my-4">
 
                     <form action="cart_add.php" method="POST">
