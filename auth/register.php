@@ -13,7 +13,11 @@
     <div class="auth-wrapper">
         <div class="auth-card">
             
-            
+            <div class="mb-4">
+                <i class="fas fa-user-plus fa-3x" style="color: #6c5ce7;"></i>
+                <h1 class="brand-title mt-2">Join Us</h1>
+                <p class="auth-subtitle">Create your account to order.</p>
+            </div>
 
             <form action="registration.php" method="post">
                 
