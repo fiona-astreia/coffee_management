@@ -34,20 +34,34 @@ $grand_total = 0;
     <style>
         body {
             background: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
         }
 
-        .container {
+        .cart-card {
             background: #fff;
             padding: 30px;
             margin-top: 50px;
-            border-radius: 8px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
         }
 
         .cart-img {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             object-fit: cover;
-            border-radius: 4px;
+            border-radius: 15px;
+        }
+
+        .btn-pill {
+            border-radius: 50px;
+            font-weight: 600;
+            padding: 10px 25px;
+        }
+
+        .table thead th {
+            border: none;
+            color: #6c5ce7;
+            font-weight: 700;
         }
     </style>
 </head>
