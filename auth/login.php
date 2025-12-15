@@ -35,7 +35,12 @@
 
                 
 
-                
+                <div class="form-group text-left pl-3">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" name="remember_me" id="rememberCheck">
+                        <label class="custom-control-label text-muted" for="rememberCheck">Remember me</label>
+                    </div>
+                </div>
 
                 <button type="submit" class="btn btn-auth mt-2">
                     LOGIN <i class="fas fa-arrow-right ml-2"></i>
