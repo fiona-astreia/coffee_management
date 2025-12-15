@@ -59,6 +59,13 @@ if (isset($_GET['delete_id'])) {
             background: #f8f9fa;
             font-family: 'Poppins', sans-serif;
         }
+        .main-card {
+            background: #fff;
+            padding: 30px;
+            margin-top: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
         .container {
             margin-top: 30px;
             background: #fff;
