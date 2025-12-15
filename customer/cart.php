@@ -121,6 +121,7 @@ $grand_total = 0;
                     </tr>
                 </tbody>
             </table>
+            </div>
 
             <div class="d-flex justify-content-between mt-4">
                     <a href="../home.php" class="btn btn-outline-secondary btn-pill">← Continue Shopping</a>
@@ -129,12 +130,14 @@ $grand_total = 0;
             </div>
 
         <?php else: ?>
-            <div class="alert alert-warning text-center">
-                Your cart is empty! <br><br>
-                <a href="../home.php" class="btn btn-primary">Go Shopping Now</a>
+            <div class="text-center py-5">
+                <i class="fas fa-shopping-basket fa-4x text-muted mb-3" style="opacity: 0.3;"></i>
+                <h4 class="text-muted">Your cart is empty!</h4>
+                <a href="../home.php" class="btn btn-primary btn-pill mt-3">Go Shopping Now</a>
             </div>
         <?php endif; ?>
     </div>
+</div>
 </body>
 
 </html>
