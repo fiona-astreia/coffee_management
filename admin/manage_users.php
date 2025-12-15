@@ -84,12 +84,13 @@ if (isset($_GET['delete_id'])) {
 </head>
 
 <body style="background: #f8f9fa;">
-    <div class="container">
-        <div class="d-flex justify-content-between mb-4">
-            <h3>User Management 👥</h3>
-
-            <a href="../home.php" class="btn btn-secondary">Back to Dashboard</a>
-        </div>
+  <div class="container">
+        <div class="main-card">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3>User Management</h3>
+                <a href="../home.php" class="btn btn-secondary btn-pill"><i class="fas fa-arrow-left mr-1"></i>
+                    Dashboard</a>
+            </div>
 
         <?php if (isset($_GET['msg']) && $_GET['msg'] == 'deleted')
             echo '<div class="alert alert-success">User deleted!</div>'; ?>
