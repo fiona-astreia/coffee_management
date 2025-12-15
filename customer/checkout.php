@@ -21,3 +21,67 @@ foreach ($cart as $item) {
     $grand_total += $item['price'] * $item['quantity'];
 }
 ?>
+// Code in here (Thu Hoai)
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mb-4">Checkout 📝</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="text-info">Order Summary</h4>
+                <ul class="list-group mb-3">
+                    <?php foreach ($cart as $item): ?>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0"><?= htmlspecialchars($item['name']) ?></h6>
+                                <small class="text-muted">Quantity: <?= $item['quantity'] ?></small>
+                            </div>
+                            <span class="text-muted">
+                                <?= number_format($item['price'] * $item['quantity'], 0, ',', '.') ?>
+                            </span>
+                        </li>
+                    <?php endforeach; ?>
+
+                    
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h4 class="text-primary">Delivery Information</h4>
+
+                <form action="place_order.php" method="POST">
+                    
+
+                    
+
+                    
+
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
