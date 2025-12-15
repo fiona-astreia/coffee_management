@@ -95,17 +95,17 @@ if (!$product) {
                     </span>
                 </p>
                 <hr>
-                <p>Description...[update later]</p>
+       <p class="text-muted">Enjoy the finest taste of our coffee, brewed to perfection just for you.</p>
+                    <hr class="my-4">
 
-                <form action="cart_add.php" method="POST">
+                    <form action="cart_add.php" method="POST">
+                        <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
 
-                    <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
-
-                    <div class="form-group d-flex align-items-center">
-                        <label class="mr-2 mb-0"><strong>Quantity:</strong></label>
-                        <input type="number" name="quantity" value="1" min="1" max="10" class="form-control"
-                            style="width: 80px;">
-                    </div>
+                        <div class="form-group mb-4">
+                            <label class="font-weight-bold text-muted">Quantity</label>
+                            <input type="number" name="quantity" value="1" min="1" max="10"
+                                class="form-control form-control-qty w-50">
+                        </div>
 
                     <?php if ($product['status'] == 'In Stock'): ?>
                         <button type="submit" class="btn btn-warning btn-lg btn-block text-white">
