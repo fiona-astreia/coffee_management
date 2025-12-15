@@ -222,7 +222,7 @@ $result = mysqli_query($con, $query); // Object - False
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
         <div class="container">
             <a class="navbar-brand brand-text" href="#">
                 <i class="fas fa-mug-hot mr-2"></i>Coffee House
@@ -288,6 +288,59 @@ $result = mysqli_query($con, $query); // Object - False
             <?php endif; ?>
         </div>
         
+        <div class="row">
+            <?php if (mysqli_num_rows($result) > 0): ?>
+                <?php while ($row = mysqli_fetch_assoc($result)): ?>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-5">
+                        <div class="product-card h-100 position-relative">
+
+                            <span class="status-badge <?= $row['status'] == 'In Stock' ? 'badge-instock' : 'badge-outstock' ?>">
+                                <?= $row['status'] ?>
+                            </span>
+
+                            <img src="<?= htmlspecialchars($row['image'] ?: 'https://placehold.co/300x300?text=No+Image') ?>"
+                                class="card-img-top" alt="Product Image">
+
+                            <div class="card-body">
+                                <h5 class="product-title"><?= htmlspecialchars($row['name']) ?></h5>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="product-price"><?= number_format($row['price'], 0, ',', '.') ?>đ</span>
+                                </div>
+
+                                <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin'): ?>
+                                    <div class="d-flex justify-content-between mt-auto">
+                                        <a href="admin/edit.php?id=<?= $row['id'] ?>"
+                                            class="btn btn-sm btn-pastel-edit flex-fill mr-2 shadow-sm">
+                                            <i class="fas fa-edit"></i> Edit
+                                        </a>
+                                        <a href="admin/delete.php?id=<?= $row['id'] ?>"
+                                            class="btn btn-sm btn-pastel-del flex-fill ml-2 shadow-sm"
+                                            onclick="return confirm('Delete this product?');">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </div>
+                                <?php else: ?>
+                                    <a href="customer/product_detail.php?id=<?= $row['id'] ?>"
+                                        class="btn btn-pastel-view shadow-sm">
+                                        View Details <i class="fas fa-arrow-right ml-2"></i>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+
+                <?php endwhile; ?>
+            <?php else: ?>
+                <div class="col-12 text-center py-5">
+                    <i class="fas fa-coffee fa-3x text-muted mb-3" style="opacity: 0.3"></i>
+                    <h4 class="text-muted">Currently, the menu is empty.</h4>
+                </div>
+            <?php endif; ?>
+        </div>
+        <?php mysqli_close($con); ?>
+    </div>
+
 </body>
 
 </html>
