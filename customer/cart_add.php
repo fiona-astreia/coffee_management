@@ -33,7 +33,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['cart'] = [];
         }
 
-        
+        // Nếu sản phẩm đã có trong giỏ -> Cộng dồn số lượng
+        if (isset($_SESSION['cart'][$id])) {
+            $_SESSION['cart'][$id]['quantity'] += $quantity;
+        } else {
+            // Nếu chưa có -> Thêm mới vào giỏ
+            $_SESSION['cart'][$id] = [
+                'name' => $product['name'],
+                'price' => $product['price'],
+                'image' => $product['image'],
+                'quantity' => $quantity
+            ];
+        }
 
         
     } else {
