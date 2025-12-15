@@ -82,6 +82,14 @@ if (!$product) {
             font-weight: 600;
             padding: 12px 0;
         }
+        
+        .form-control-qty {
+            border-radius: 50px;
+            text-align: center;
+            border: 2px solid #eee;
+            height: 50px;
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 
