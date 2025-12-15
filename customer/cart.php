@@ -102,7 +102,12 @@ $grand_total = 0;
                 <a href="checkout.php" class="btn btn-success btn-lg">Proceed to Checkout →</a>
             </div>
 
-        
+        <?php else: ?>
+            <div class="alert alert-warning text-center">
+                Your cart is empty! <br><br>
+                <a href="../home.php" class="btn btn-primary">Go Shopping Now</a>
+            </div>
+        <?php endif; ?>
     </div>
 </body>
 
