@@ -66,6 +66,10 @@ if (isset($_GET['delete_id'])) {
             border-radius: 25px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
         }
+        h3 {
+            color: #6c5ce7;
+            font-weight: 700;
+        }
         .container {
             margin-top: 30px;
             background: #fff;
