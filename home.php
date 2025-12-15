@@ -287,7 +287,7 @@ $result = mysqli_query($con, $query); // Object - False
                 </div>
             <?php endif; ?>
         </div>
-        
+
         <div class="row">
             <?php if (mysqli_num_rows($result) > 0): ?>
                 <?php while ($row = mysqli_fetch_assoc($result)): ?>
@@ -340,6 +340,15 @@ $result = mysqli_query($con, $query); // Object - False
         </div>
         <?php mysqli_close($con); ?>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        if (window.location.search.length >= 0) {
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    </script>
 
 </body>
 
