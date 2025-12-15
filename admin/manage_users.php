@@ -82,8 +82,24 @@ if (isset($_GET['delete_id'])) {
                     <th>Action</th>
                 </tr>
             </thead>
+            <tbody>
+                <?php while ($row = mysqli_fetch_assoc($result)): ?>
+                    <tr>
+                        <td><?= $row['id'] ?></td>
+                        <td><?= htmlspecialchars($row['username']) ?></td>
+                        <td>
+                            <span class="badge badge-<?= $row['role'] == 'admin' ? 'danger' : 'info' ?>">
+                                <?= $row['role'] ?>
+                            </span>
+                        </td>
+                        <td>
+                            <a href="manage_users.php?delete_id=<?= $row['id'] ?>" class="btn btn-sm btn-danger"
+                                onclick="return confirm('Delete this user?');">Delete</a>
+                        </td>
+                    </tr>
+                <?php endwhile; ?>
+            </tbody>
         </table>
-
     </div>
 </body>
 
