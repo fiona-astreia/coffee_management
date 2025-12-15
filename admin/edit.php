@@ -126,6 +126,7 @@ mysqli_close($con);
     <title>Edit Product</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
         body {
             background: #f8f9fa;
@@ -153,12 +154,13 @@ mysqli_close($con);
             box-shadow: none;
             background: #fff;
         }
-        
+
         .btn-pill {
             border-radius: 50px;
             font-weight: 600;
             padding: 10px 30px;
         }
+
         img.current-img {
             border-radius: 15px;
             margin-top: 10px;
@@ -171,8 +173,8 @@ mysqli_close($con);
             text-align: center;
             margin-bottom: 30px;
         }
-
     </style>
+    
 </head>
 
 <body>
