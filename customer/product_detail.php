@@ -126,17 +126,17 @@ if (!$product) {
                                 class="form-control form-control-qty w-50">
                         </div>
 
-                    <?php if ($product['status'] == 'In Stock'): ?>
-                        <button type="submit" class="btn btn-warning btn-lg btn-block text-white">
-                            Add to Cart 🛒
-                        </button>
-                    <?php else: ?>
-                        <button type="button" class="btn btn-secondary btn-lg btn-block" disabled>Sold Out</button>
-                    <?php endif; ?>
-                </form>
+                        <?php if ($product['status'] == 'In Stock'): ?>
+                            <button type="submit" class="btn btn-warning btn-pill btn-block text-white shadow-sm"
+                                style="background-color: #fdcb6e; border: none;">
+                                Add to Cart <i class="fas fa-shopping-cart ml-2"></i>
+                            </button>
+                        <?php else: ?>
+                            <button type="button" class="btn btn-secondary btn-pill btn-block" disabled>Sold Out</button>
+                        <?php endif; ?>
+                    </form>
 
-                <br>
-                <a href="../home.php" class="btn btn-outline-secondary">Back to Menu</a>
+                    <a href="../home.php" class="btn btn-outline-secondary btn-pill btn-block mt-3">Back to Menu</a>
             </div>
         </div>
     </div>
