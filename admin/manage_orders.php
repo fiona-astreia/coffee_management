@@ -93,17 +93,18 @@ $result = mysqli_query($con, $query);
         <?php if (isset($_GET['msg']) && $_GET['msg'] == 'updated')
             echo '<div class="alert alert-success">Order status updated!</div>'; ?>
 
-        <table class="table table-bordered text-center">
-            <thead class="thead-dark">
-                <tr>
-                    <th>Order ID</th>
-                    <th>Customer</th>
-                    <th>Total (VND)</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
+        <div class="table-responsive">
+                <table class="table table-hover text-center">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Customer Info</th>
+                            <th>Total (VND)</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
             <tbody>
                 <?php while ($row = mysqli_fetch_assoc($result)): ?>
                     <tr>
