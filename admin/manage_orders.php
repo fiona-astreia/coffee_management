@@ -40,15 +40,44 @@ $result = mysqli_query($con, $query);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
+         body {
             background: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
         }
 
-        .container {
+        .main-card {
             background: #fff;
-            padding: 20px;
+            padding: 30px;
             margin-top: 30px;
-            border-radius: 8px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        h3 {
+            color: #6c5ce7;
+            font-weight: 700;
+        }
+
+        .table thead th {
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #f1f2f6;
+        }
+
+        .btn-pill {
+            border-radius: 50px;
+            font-weight: 600;
+            padding: 5px 15px;
+        }
+
+        .badge-pill-custom {
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-weight: 600;
         }
     </style>
 </head>
