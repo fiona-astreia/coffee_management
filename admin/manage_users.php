@@ -109,10 +109,11 @@ if (isset($_GET['delete_id'])) {
                     <tr>
                             <td><?= $row['id'] ?></td>
                             <td class="font-weight-bold"><?= htmlspecialchars($row['username']) ?></td>
-                            <td>
-                            <span class="badge badge-<?= $row['role'] == 'admin' ? 'danger' : 'info' ?>">
-                                <?= $row['role'] ?>
-                            </span>
+                        <td>
+                               <span class="badge badge-<?= $row['role'] == 'admin' ? 'danger' : 'info' ?> p-2"
+                                    style="border-radius: 10px;">
+                                    <?= $row['role'] ?>
+                                </span>
                         </td>
                         <td>
                             <a href="manage_users.php?delete_id=<?= $row['id'] ?>" class="btn btn-sm btn-danger"
