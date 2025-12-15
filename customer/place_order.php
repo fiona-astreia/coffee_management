@@ -16,8 +16,12 @@ if (empty($cart)) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // 1. Lấy thông tin người nhận
-
+    $user_id = $_SESSION['user_id'];
+    $name = trim($_POST['customer_name']);
+    $phone = trim($_POST['phone']);
+    $address = trim($_POST['address']);
     
+    // Tính lại tổng tiền (Backend phải tự tính lại để bảo mật, không tin client)
     
     
         
@@ -25,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         
     }
-
+}
 mysqli_close($con);
 // Lưu Order => Lưu Items => xóa giỏ => Chuyển hướng
 ?>
