@@ -118,9 +118,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 mysqli_close($con);
 ?>
 
-// HOÀNG NHẬT
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Edit Product</title>
