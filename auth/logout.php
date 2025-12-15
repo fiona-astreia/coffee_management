@@ -11,8 +11,7 @@ if (isset($_COOKIE['remember_me'])) {
     mysqli_stmt_bind_param($stmt_delete, "s", $token);
     mysqli_stmt_execute($stmt_delete);
     
-    mysqli_stmt_close($stmt_delete);
-    mysqli_close($con);
+   
 }
 
 // 2. Hủy cookie "remember_me" khỏi trình duyệt
