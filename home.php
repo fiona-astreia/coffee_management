@@ -70,6 +70,13 @@ $result = mysqli_query($con, $query); // Object - False
             color: #555;
         }
 
+        /* --- NAVBAR --- */
+        .navbar-custom {
+            background-color: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            /* Bóng đổ siêu nhẹ */
+            padding: 15px 0;
+        }
         
     </style>
 </head>
