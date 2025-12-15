@@ -144,7 +144,11 @@ mysqli_close($con);
         <h3 class="text-primary mb-4">Edit Product (ID: <?= $id ?>)</h3>
 
         <form method="POST" enctype="multipart/form-data">
-            
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" name="name" class="form-control" required
+                    value="<?= htmlspecialchars($product['name']) ?>">
+            </div>
             <div class="form-group">
                 <label>Price (VND):</label>
                 <input type="number" name="price" class="form-control" min="0" step="1000" required
