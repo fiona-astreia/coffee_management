@@ -8,3 +8,29 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // 1. Lấy dữ liệu từ form
+    $id = (int) $_POST['product_id'];
+    $quantity = (int) $_POST['quantity'];
+
+    // 2. Validate
+    if ($id <= 0 || $quantity <= 0) {
+        die("Invalid product or quantity");
+    }
+
+    // 3. Lấy thông tin sản phẩm chuẩn từ DB (Để tránh hack giá từ HTML)
+
+
+    if ($product) {
+        // 4. Logic Giỏ hàng (Session)
+
+
+
+
+
+
+    } else {
+
+    }
+}
+?>
