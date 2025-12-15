@@ -67,7 +67,26 @@ $grand_total = 0;
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    <?php foreach ($cart as $id => $item): ?>
+                        <?php
+                        $line_total = $item['price'] * $item['quantity'];
+                        $grand_total += $line_total;
+                        ?>
+                        <tr>
+                            <td>
+                                <img src="../<?= htmlspecialchars($item['image'] ?: 'assets/img/no-image.png') ?>"
+                                    class="cart-img">
+                            </td>
+                            <td><?= htmlspecialchars($item['name']) ?></td>
+                            <td><?= number_format($item['price'], 0, ',', '.') ?></td>
+                            <td><?= $item['quantity'] ?></td>
+                            <td><?= number_format($line_total, 0, ',', '.') ?></td>
+                            <td>
+                                <a href="cart.php?action=remove&id=<?= $id ?>" class="btn btn-sm btn-danger"
+                                    onclick="return confirm('Remove this item?');">Remove ❌</a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
 
                     
                 </tbody>
