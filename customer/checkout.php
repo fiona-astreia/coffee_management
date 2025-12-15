@@ -28,17 +28,39 @@ foreach ($cart as $item) {
 <head>
     <meta charset="UTF-8">
     <title>Checkout</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
             background: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
         }
 
-        .container {
+        .checkout-card {
             background: #fff;
             padding: 30px;
-            margin-top: 50px;
-            border-radius: 8px;
+            margin-top: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-control {
+            border-radius: 50px;
+            padding: 20px;
+            background: #fcfcfc;
+            border: 1px solid #eee;
+        }
+
+        .form-control:focus {
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+            border-color: #6c5ce7;
+        }
+
+        .btn-pill {
+            border-radius: 50px;
+            font-weight: 600;
+            padding: 12px;
         }
     </style>
 </head>
