@@ -154,24 +154,6 @@ mysqli_close($con);
             background: #fff;
         }
 
-        .btn-pill {
-            border-radius: 50px;
-            font-weight: 600;
-            padding: 10px 30px;
-        }
-
-        img.current-img {
-            border-radius: 15px;
-            margin-top: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        h3 {
-            color: #6c5ce7;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 30px;
-        }
     </style>
 </head>
 
