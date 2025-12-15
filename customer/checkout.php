@@ -74,9 +74,16 @@ foreach ($cart as $item) {
                 <h4 class="text-primary">Delivery Information</h4>
 
                 <form action="place_order.php" method="POST">
-                    
+                    <div class="form-group">
+                        <label>Receiver Name:</label>
+                        <input type="text" name="customer_name" class="form-control" required
+                            placeholder="Enter your full name">
+                    </div>
 
-                    
+                    <div class="form-group">
+                        <label>Phone Number:</label>
+                        <input type="text" name="phone" class="form-control" required placeholder="09xxxxxxxx">
+                    </div>
 
                     
 
