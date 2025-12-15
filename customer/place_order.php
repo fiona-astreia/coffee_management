@@ -22,7 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = trim($_POST['address']);
     
     // Tính lại tổng tiền (Backend phải tự tính lại để bảo mật, không tin client)
-    
+    $total_amount = 0;
+    foreach ($cart as $item) {
+        $total_amount += $item['price'] * $item['quantity'];
+    }
+
     
         
 
