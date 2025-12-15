@@ -42,7 +42,7 @@ if (!$product) {
     die("The product does not exist!");
 }
 ?>
-// HOÀNG NHẬT
+
 <!DOCTYPE html>
 <html lang="en">
 
