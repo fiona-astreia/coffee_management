@@ -59,7 +59,14 @@ if (isset($_GET['delete_id'])) {
         }
     </style>
 </head>
-<body>
-    
+
+<body style="background: #f8f9fa;">
+   <div class="container">
+        <div class="d-flex justify-content-between mb-4">
+            <h3>User Management 👥</h3>
+            
+            <a href="../home.php" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+    </div> 
 </body>
 </html>
