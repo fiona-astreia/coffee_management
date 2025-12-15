@@ -101,6 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 mysqli_close($con);
 ?>
 
+// code in here (Thu Hoai)
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -116,7 +117,39 @@ mysqli_close($con);
         }
     </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <h3 class="text-primary mb-4">Add New Product</h3>
+
+        <?php if ($errorMessage): ?>
+            <div class="alert alert-danger"><?= $errorMessage ?></div>
+        <?php endif; ?>
+
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" name="name" class="form-control" required placeholder="Coffee Name">
+            </div>
+            <div class="form-group">
+                <label>Price (VND):</label>
+                <input type="number" name="price" class="form-control" required min="0" step="1000">
+            </div>
+            <div class="form-group">
+                <label>Status:</label>
+                <select name="status" class="form-control" required>
+                    <option value="In Stock">In Stock</option>
+                    <option value="Out of Stock">Out of Stock</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Add Image:</label>
+                <input type="file" name="image" accept=".jpg,.jpeg,.png" class="form-control-file">
+            </div>
+            <button type="submit" class="btn btn-success">Add</button>
+            <a href="../home.php" class="btn btn-secondary">Back</a>
+        </form>
+    </div>
 </body>
+
 </html>
