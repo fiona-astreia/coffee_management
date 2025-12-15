@@ -15,14 +15,21 @@ $order_id = $_GET['orderid'] ?? 0;
     <style>
         body {
             background: #f8f9fa;
-        }
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            }
 
-        .container {
+        .success-card {
             background: #fff;
             padding: 50px;
-            margin-top: 50px;
-            border-radius: 8px;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
             text-align: center;
+            max-width: 500px;
+            width: 100%;
         }
 
         .success-icon {
