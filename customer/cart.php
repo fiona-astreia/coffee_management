@@ -91,14 +91,15 @@ $grand_total = 0;
                         $grand_total += $line_total;
                         ?>
                         <tr>
-                            <td>
-                                <img src="../<?= htmlspecialchars($item['image'] ?: 'assets/img/no-image.png') ?>"
-                                    class="cart-img">
+                            <td class="align-middle">
+                                        <img src="../<?= htmlspecialchars($item['image'] ?: 'assets/img/no-image.png') ?>"
+                                            class="cart-img shadow-sm">
                             </td>
-                            <td><?= htmlspecialchars($item['name']) ?></td>
-                            <td><?= number_format($item['price'], 0, ',', '.') ?></td>
-                            <td><?= $item['quantity'] ?></td>
-                            <td><?= number_format($line_total, 0, ',', '.') ?></td>
+                            <td class="align-middle font-weight-bold"><?= htmlspecialchars($item['name']) ?></td>
+                            <td class="align-middle"><?= number_format($item['price'], 0, ',', '.') ?></td>
+                            <td class="align-middle">x<?= $item['quantity'] ?></td>
+                            <td class="align-middle font-weight-bold" style="color: #6c5ce7;">
+                                <?= number_format($line_total, 0, ',', '.') ?></td>
                             <td>
                                 <a href="cart.php?action=remove&id=<?= $id ?>" class="btn btn-sm btn-danger"
                                     onclick="return confirm('Remove this item?');">Remove ❌</a>
