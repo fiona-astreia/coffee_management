@@ -98,7 +98,28 @@ $result = mysqli_query($con, $query);
                             <span class="badge badge-<?= $badgeColor ?> p-2"><?= $row['status'] ?></span>
                         </td>
 
-                        
+                        <td>
+                            <a href="order_detail.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-info text-white">View
+                                Items</a>
+
+                            <?php if ($row['status'] == 'Pending'): ?>
+                                <span class="mx-1">|</span>
+
+                                <form method="POST" style="display:inline-block;">
+                                    <input type="hidden" name="order_id" value="<?= $row['id'] ?>">
+                                    <input type="hidden" name="update_status" value="1">
+                                    <button type="submit" name="status" value="Completed" class="btn btn-sm btn-success"
+                                        onclick="return confirm('Are you sure to COMPLETE this order?');">✔</button>
+                                </form>
+
+                                <form method="POST" style="display:inline-block;">
+                                    <input type="hidden" name="order_id" value="<?= $row['id'] ?>">
+                                    <input type="hidden" name="update_status" value="1">
+                                    <button type="submit" name="status" value="Cancelled" class="btn btn-sm btn-danger"
+                                        onclick="return confirm('Are you sure to CANCEL this order?');">✘</button>
+                                </form>
+                            <?php endif; ?>
+                        </td>
                     </tr>
                 <?php endwhile; ?>
             </tbody>
