@@ -129,6 +129,26 @@ $result = mysqli_query($con, $query); // Object - False
             font-weight: 700;
             font-size: 1.3rem;
         }
+
+        /* --- BADGES (Nhãn trạng thái) --- */
+        .status-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            /* Đổi sang trái cho lạ mắt */
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .badge-instock {
+            background-color: #00b894;
+            color: white;
+        }
     </style>
 </head>
 
