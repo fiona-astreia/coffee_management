@@ -155,16 +155,17 @@ mysqli_close($con);
 
 <body>
     <div class="container">
-        <h3 class="text-primary mb-4">Add New Product</h3>
+        <div class="form-card">
+            <h3>Add New Product ☕</h3>
 
         <?php if ($errorMessage): ?>
-            <div class="alert alert-danger"><?= $errorMessage ?></div>
+            <div class="alert alert-danger rounded-pill text-center"><?= $errorMessage ?></div>
         <?php endif; ?>
 
         <form method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label>Name:</label>
-                <input type="text" name="name" class="form-control" required placeholder="Coffee Name">
+                <label class="ml-2 font-weight-bold">Name</label>
+                <input type="text" name="name" class="form-control" required placeholder="Ex: Cappuccino">
             </div>
             <div class="form-group">
                 <label>Price (VND):</label>
