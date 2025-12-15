@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 mysqli_close($con);
 ?>
 
-// code in here (Thu Hoai)
+// THU HOÀI
 <!DOCTYPE html>
 <html lang="vi">
 

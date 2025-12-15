@@ -29,7 +29,7 @@ if (isset($_POST['update_status'])) {
 $query = "SELECT * FROM orders ORDER BY created_at DESC";
 $result = mysqli_query($con, $query);
 ?>
-// Code in here (Ly)
+// LY
 <!DOCTYPE html>
 <html lang="en">
 

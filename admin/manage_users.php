@@ -44,7 +44,7 @@ if (isset($_GET['delete_id'])) {
     exit();
 }
 ?>
-// Code in here (Ly)
+// LY
 <!DOCTYPE html>
 <html lang="en">
 
