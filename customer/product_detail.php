@@ -95,15 +95,17 @@ if (!$product) {
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 text-center">
-                <img src="../<?= htmlspecialchars($product['image'] ?: 'assets/img/no-image.png') ?>" class="detail-img"
-                    alt="Product Image">
-            </div>
+        <div class="product-container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="../<?= htmlspecialchars($product['image'] ?: 'assets/img/no-image.png') ?>"
+                        class="detail-img" alt="Product Image">
+                </div>
 
-            <div class="col-md-6">
-                <h2 class="mb-3"><?= htmlspecialchars($product['name']) ?></h2>
-                <p class="price-tag"><?= number_format($product['price'], 0, ',', '.') ?> VND</p>
+                <div class="col-md-6 pl-md-5">
+                    <h2 class="font-weight-bold mb-3"><?= htmlspecialchars($product['name']) ?></h2>
+                    <p class="price-tag"><?= number_format($product['price'], 0, ',', '.') ?> <small
+                            style="font-size: 1rem; color: #aaa;">VND</small></p>
 
                 <p><strong>Status:</strong>
                     <span class="badge badge-<?= $product['status'] == 'In Stock' ? 'success' : 'secondary' ?>">
