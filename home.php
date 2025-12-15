@@ -222,6 +222,30 @@ $result = mysqli_query($con, $query); // Object - False
 
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand brand-text" href="#">
+                <i class="fas fa-mug-hot mr-2"></i>Coffee House
+            </a>
+
+            <div class="ml-auto d-flex align-items-center">
+                <span class="mr-3 d-none d-md-inline text-muted">
+                    Welcome, <strong><?= htmlspecialchars($_SESSION['username']) ?></strong>
+                </span>
+
+                <?php if (isset($_SESSION['role']) && $_SESSION['role'] != 'admin'): ?>
+                    <a href="customer/cart.php" class="btn btn-pastel-cart mr-3 shadow-sm">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge badge-light text-dark ml-1"><?= $cart_count ?></span>
+                    </a>
+                <?php endif; ?>
+
+                <a href="auth/logout.php" class="btn btn-outline-secondary btn-sm px-3" style="border-radius: 20px;">
+                    Logout <i class="fas fa-sign-out-alt ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
 </body>
 
 </html>
