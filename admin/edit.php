@@ -153,6 +153,13 @@ mysqli_close($con);
             box-shadow: none;
             background: #fff;
         }
+        
+        .btn-pill {
+            border-radius: 50px;
+            font-weight: 600;
+            padding: 10px 30px;
+        }
+
 
     </style>
 </head>
