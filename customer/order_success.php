@@ -37,7 +37,9 @@ $order_id = $_GET['orderid'] ?? 0;
         <h2 class="text-success mt-3">Order Placed Successfully!</h2>
         <p class="lead">Thank you for your purchase.</p>
         <p>Your Order ID is: <strong>#<?= htmlspecialchars($order_id) ?></strong></p>
-        
+        <hr>
+        <p>We will contact you soon to confirm your order.</p>
+        <a href="../home.php" class="btn btn-primary">Back to Home</a>
     </div>
 </body>
 
