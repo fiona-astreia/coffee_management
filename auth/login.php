@@ -33,7 +33,10 @@
 
                 
 
-                
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control rounded-pill" placeholder="Password"
+                        required>
+                </div>
 
                 <div class="form-group text-left pl-3">
                     <div class="custom-control custom-checkbox">
