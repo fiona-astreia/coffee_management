@@ -33,7 +33,10 @@ $order_id = $_GET['orderid'] ?? 0;
 
 <body>
     <div class="container">
-
+        <div class="success-icon">🎉</div>
+        <h2 class="text-success mt-3">Order Placed Successfully!</h2>
+        <p class="lead">Thank you for your purchase.</p>
+        <p>Your Order ID is: <strong>#<?= htmlspecialchars($order_id) ?></strong></p>
         
     </div>
 </body>
