@@ -5,11 +5,13 @@ require_once '../config/db.php';
 // ===== BẮT ĐẦU: AUTO LOGIN (TOKEN) =====
 if (!isset($_SESSION['username']) && isset($_COOKIE['remember_me'])) {
     $token = $_COOKIE['remember_me'];
-    $stmt_find = mysqli_prepare($con, 
+    $stmt_find = mysqli_prepare(
+        $con,
         "SELECT users.* FROM auth_tokens 
          JOIN users ON auth_tokens.user_id = users.id 
-         WHERE auth_tokens.token = ? AND auth_tokens.expires_at > NOW()");
-    
+         WHERE auth_tokens.token = ? AND auth_tokens.expires_at > NOW()"
+    );
+
     mysqli_stmt_bind_param($stmt_find, "s", $token);
     mysqli_stmt_execute($stmt_find);
     $result_find = mysqli_stmt_get_result($stmt_find);
@@ -37,7 +39,7 @@ $result = mysqli_query($con, $query);
 if (isset($_GET['delete_id'])) {
     $del_id = (int) $_GET['delete_id'];
     mysqli_query($con, "DELETE FROM users WHERE id = $del_id");
-    
+
     header("location: manage_users.php?msg=deleted");
     exit();
 }
@@ -61,12 +63,18 @@ if (isset($_GET['delete_id'])) {
 </head>
 
 <body style="background: #f8f9fa;">
-   <div class="container">
+    <div class="container">
         <div class="d-flex justify-content-between mb-4">
             <h3>User Management 👥</h3>
-            
+
             <a href="../home.php" class="btn btn-secondary">Back to Dashboard</a>
         </div>
-    </div> 
+
+        <?php if (isset($_GET['msg']) && $_GET['msg'] == 'deleted')
+            echo '<div class="alert alert-success">User deleted!</div>'; ?>
+
+
+    </div>
 </body>
+
 </html>
