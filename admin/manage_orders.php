@@ -136,15 +136,13 @@ $result = mysqli_query($con, $query);
                                         <i class="fas fa-eye"></i> View
                             </a>
                             <?php if ($row['status'] == 'Pending'): ?>
-                                <span class="mx-1">|</span>
-
-                                <form method="POST" style="display:inline-block;">
-                                    <input type="hidden" name="order_id" value="<?= $row['id'] ?>">
-                                    <input type="hidden" name="update_status" value="1">
-                                    <button type="submit" name="status" value="Completed" class="btn btn-sm btn-success"
-                                        onclick="return confirm('Are you sure to COMPLETE this order?');">✔</button>
-                                </form>
-
+                                 <span class="mx-1 text-muted">|</span>
+                                        <form method="POST" style="display:inline-block;">
+                                            <input type="hidden" name="order_id" value="<?= $row['id'] ?>">
+                                            <input type="hidden" name="update_status" value="1">
+                                            <button type="submit" name="status" value="Completed" class="btn btn-sm btn-success btn-pill" onclick="return confirm('Complete this order?');">✔</button>
+                                        </form>
+                                        
                                 <form method="POST" style="display:inline-block;">
                                     <input type="hidden" name="order_id" value="<?= $row['id'] ?>">
                                     <input type="hidden" name="update_status" value="1">
