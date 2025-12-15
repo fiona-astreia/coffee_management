@@ -73,6 +73,16 @@ if (isset($_GET['delete_id'])) {
         <?php if (isset($_GET['msg']) && $_GET['msg'] == 'deleted')
             echo '<div class="alert alert-success">User deleted!</div>'; ?>
 
+        <table class="table table-bordered text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+        </table>
 
     </div>
 </body>
