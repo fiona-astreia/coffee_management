@@ -116,8 +116,11 @@ if (isset($_GET['delete_id'])) {
                                 </span>
                         </td>
                         <td>
-                            <a href="manage_users.php?delete_id=<?= $row['id'] ?>" class="btn btn-sm btn-danger"
-                                onclick="return confirm('Delete this user?');">Delete</a>
+                            <a href="manage_users.php?delete_id=<?= $row['id'] ?>"
+                                    class="btn btn-sm btn-outline-danger btn-pill"
+                                    onclick="return confirm('Delete this user?');">
+                                    <i class="fas fa-trash-alt"></i> Delete
+                            </a>
                         </td>
                     </tr>
                 <?php endwhile; ?>
