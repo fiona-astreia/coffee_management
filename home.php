@@ -110,7 +110,11 @@ $result = mysqli_query($con, $query); // Object - False
             border-bottom: 1px solid #f0f0f0;
         }
 
-        
+        .card-body {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 
