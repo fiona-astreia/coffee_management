@@ -57,7 +57,43 @@ $result_items = mysqli_query($con, $query_items);
 </head>
 
 <body>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3>Order Details 🧾 <small class="text-muted">#<?= $order_id ?></small></h3>
+            <a href="manage_orders.php" class="btn btn-secondary">Back to List</a>
+        </div>
 
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header bg-info text-white">Customer Info</div>
+                    <div class="card-body">
+                        <p><strong>Name:</strong> <?= htmlspecialchars($order['customer_name']) ?></p>
+                        <p><strong>Phone:</strong> <?= htmlspecialchars($order['phone']) ?></p>
+                        <p><strong>Address:</strong> <?= htmlspecialchars($order['address']) ?></p>
+                        <p><strong>Order Date:</strong> <?= $order['created_at'] ?></p>
+                        <p><strong>Status:</strong> <span class="badge badge-primary"><?= $order['status'] ?></span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h5 class="text-primary">Items List</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Product</th>
+                            <th>Qty</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
