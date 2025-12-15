@@ -89,7 +89,27 @@ $result_items = mysqli_query($con, $query_items);
                             <th>Total</th>
                         </tr>
                     </thead>
-                    
+                    <tbody>
+                        <?php while ($item = mysqli_fetch_assoc($result_items)): ?>
+                            <tr>
+                                <td>
+                                    <img src="../<?= htmlspecialchars($item['image'] ?: 'assets/img/no-image.png') ?>"
+                                        class="thumb-img">
+                                </td>
+                                <td><?= htmlspecialchars($item['product_name']) ?></td>
+                                <td>x<?= $item['quantity'] ?></td>
+                                <td><?= number_format($item['price']) ?></td>
+                                <td><?= number_format($item['price'] * $item['quantity']) ?></td>
+                            </tr>
+                        <?php endwhile; ?>
+
+                        <tr class="bg-light">
+                            <td colspan="4" class="text-right"><strong>Grand Total:</strong></td>
+                            <td class="text-danger font-weight-bold">
+                                <?= number_format($order['total_amount'], 0, ',', '.') ?> VND
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
