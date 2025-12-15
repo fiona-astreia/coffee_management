@@ -99,6 +99,11 @@ $result = mysqli_query($con, $query); // Object - False
             height: 100%;
         }
 
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.1);
+        }
+
         
     </style>
 </head>
