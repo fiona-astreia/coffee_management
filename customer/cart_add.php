@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("location: cart.php");
         exit();
     } else {
-        
+        die("Product not found");
     }
 }
 ?>
