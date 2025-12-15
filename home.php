@@ -85,6 +85,20 @@ $result = mysqli_query($con, $query); // Object - False
             font-size: 1.6rem;
             letter-spacing: -0.5px;
         }
+
+        /* Card Sản phẩm đẹp */
+        .product-card {
+            border: none;
+            border-radius: 25px;
+            /* Bo góc nhiều hơn */
+            background: #fff;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            /* Hiệu ứng nảy */
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            height: 100%;
+        }
+
         
     </style>
 </head>
