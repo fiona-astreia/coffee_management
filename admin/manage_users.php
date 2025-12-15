@@ -27,3 +27,18 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
     header('location:../home.php?msg=no_permission');
     exit();
 }
+
+/* 3. LẤY DANH SÁCH USER (Trừ chính mình) */
+$my_id = $_SESSION['user_id'];
+$query = "SELECT * FROM users WHERE id != $my_id ORDER BY id DESC";
+$result = mysqli_query($con, $query);
+
+/* 4. XỬ LÝ XÓA USER */
+if (isset($_GET['delete_id'])) {
+    $del_id = (int) $_GET['delete_id'];
+    mysqli_query($con, "DELETE FROM users WHERE id = $del_id");
+    
+    header("location: manage_users.php?msg=deleted");
+    exit();
+}
+?>
