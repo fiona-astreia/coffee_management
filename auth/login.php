@@ -62,10 +62,7 @@
 
             </form>
 
-            <div class="mt-4 text-muted" style="font-size: 0.9rem;">
-                Don't have an account?
-                <a href="register.php" class="auth-link ml-1">Register Here</a>
-            </div>
+            
 
         </div>
     </div>
