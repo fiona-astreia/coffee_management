@@ -173,8 +173,8 @@ mysqli_close($con);
                         placeholder="Ex: 50000">
             </div>
             <div class="form-group">
-                <label>Status:</label>
-                <select name="status" class="form-control" required>
+                <label class="ml-2 font-weight-bold">Status</label>
+                <select name="status" class="form-control" style="height: auto;">
                     <option value="In Stock">In Stock</option>
                     <option value="Out of Stock">Out of Stock</option>
                 </select>
