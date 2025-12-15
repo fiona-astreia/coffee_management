@@ -70,6 +70,11 @@ if (isset($_GET['delete_id'])) {
             color: #6c5ce7;
             font-weight: 700;
         }
+        .table thead th {
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+        }
         .container {
             margin-top: 30px;
             background: #fff;
