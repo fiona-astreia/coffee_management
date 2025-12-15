@@ -107,9 +107,9 @@ if (isset($_GET['delete_id'])) {
             <tbody>
                 <?php while ($row = mysqli_fetch_assoc($result)): ?>
                     <tr>
-                        <td><?= $row['id'] ?></td>
-                        <td><?= htmlspecialchars($row['username']) ?></td>
-                        <td>
+                            <td><?= $row['id'] ?></td>
+                            <td class="font-weight-bold"><?= htmlspecialchars($row['username']) ?></td>
+                            <td>
                             <span class="badge badge-<?= $row['role'] == 'admin' ? 'danger' : 'info' ?>">
                                 <?= $row['role'] ?>
                             </span>
