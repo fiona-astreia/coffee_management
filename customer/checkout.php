@@ -91,7 +91,9 @@ foreach ($cart as $item) {
                             placeholder="Your delivery address..."></textarea>
                     </div>
 
-                    
+                    <hr class="mb-4">
+                    <button type="submit" class="btn btn-success btn-lg btn-block">Confirm Order ✅</button>
+                    <a href="cart.php" class="btn btn-secondary btn-block">Back to Cart</a>
                 </form>
             </div>
         </div>
