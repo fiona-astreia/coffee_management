@@ -79,7 +79,23 @@ if (!$product) {
                 <hr>
                 <p>Description...[update later]</p>
                 
-                
+                <form action="cart_add.php" method="POST">
+                    
+                    <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+
+                    <div class="form-group d-flex align-items-center">
+                        <label class="mr-2 mb-0"><strong>Quantity:</strong></label>
+                        <input type="number" name="quantity" value="1" min="1" max="10" class="form-control" style="width: 80px;">
+                    </div>
+                    
+                    <?php if ($product['status'] == 'In Stock'): ?>
+                        <button type="submit" class="btn btn-warning btn-lg btn-block text-white">
+                            Add to Cart 🛒
+                        </button>
+                    <?php else: ?>
+                        <button type="button" class="btn btn-secondary btn-lg btn-block" disabled>Sold Out</button>
+                    <?php endif; ?>
+                </form>
 
                 <br>
                 <a href="../home.php" class="btn btn-outline-secondary">Back to Menu</a>
