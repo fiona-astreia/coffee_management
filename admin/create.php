@@ -101,14 +101,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 mysqli_close($con);
 ?>
 
-// THU HOÀI
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Add New Product</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -131,7 +130,7 @@ mysqli_close($con);
             border: 1px solid #eee;
             background: #fcfcfc;
         }
-        
+
         .form-control:focus {
             border-color: #6c5ce7;
             box-shadow: none;
@@ -158,37 +157,38 @@ mysqli_close($con);
         <div class="form-card">
             <h3>Add New Product ☕</h3>
 
-        <?php if ($errorMessage): ?>
-            <div class="alert alert-danger rounded-pill text-center"><?= $errorMessage ?></div>
-        <?php endif; ?>
+            <?php if ($errorMessage): ?>
+                <div class="alert alert-danger rounded-pill text-center"><?= $errorMessage ?></div>
+            <?php endif; ?>
 
-        <form method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <label class="ml-2 font-weight-bold">Name</label>
-                <input type="text" name="name" class="form-control" required placeholder="Ex: Cappuccino">
-            </div>
-            <div class="form-group">
-                <label class="ml-2 font-weight-bold">Price (VND)</label>
-                <input type="number" name="price" class="form-control" required min="0" step="1000"
+            <form method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label class="ml-2 font-weight-bold">Name</label>
+                    <input type="text" name="name" class="form-control" required placeholder="Ex: Cappuccino">
+                </div>
+                <div class="form-group">
+                    <label class="ml-2 font-weight-bold">Price (VND)</label>
+                    <input type="number" name="price" class="form-control" required min="0" step="1000"
                         placeholder="Ex: 50000">
-            </div>
-            <div class="form-group">
-                <label class="ml-2 font-weight-bold">Status</label>
-                <select name="status" class="form-control" style="height: auto;">
-                    <option value="In Stock">In Stock</option>
-                    <option value="Out of Stock">Out of Stock</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label class="ml-2 font-weight-bold">Image</label>
-                <input type="file" name="image" accept=".jpg,.jpeg,.png" class="form-control-file ml-2">
-            </div>
-            
-            <div class="text-center mt-4">
+                </div>
+                <div class="form-group">
+                    <label class="ml-2 font-weight-bold">Status</label>
+                    <select name="status" class="form-control" style="height: auto;">
+                        <option value="In Stock">In Stock</option>
+                        <option value="Out of Stock">Out of Stock</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="ml-2 font-weight-bold">Image</label>
+                    <input type="file" name="image" accept=".jpg,.jpeg,.png" class="form-control-file ml-2">
+                </div>
+
+                <div class="text-center mt-4">
                     <button type="submit" class="btn btn-success btn-pill mr-2 shadow-sm">Add Product</button>
                     <a href="../home.php" class="btn btn-outline-secondary btn-pill">Cancel</a>
-            </div>
-        </form>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 
