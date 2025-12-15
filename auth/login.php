@@ -37,7 +37,9 @@
 
                 
 
-                
+                <button type="submit" class="btn btn-auth mt-2">
+                    LOGIN <i class="fas fa-arrow-right ml-2"></i>
+                </button>
 
             </form>
 
