@@ -115,6 +115,20 @@ $result = mysqli_query($con, $query); // Object - False
             display: flex;
             flex-direction: column;
         }
+
+        .product-title {
+            font-weight: 600;
+            font-size: 1.15rem;
+            color: #2d3436;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            color: #fdcb6e;
+            /* Vàng nghệ Pastel */
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
     </style>
 </head>
 
